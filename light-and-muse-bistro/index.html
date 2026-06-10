@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Light & Muse 光與靈感餐酒館 - 位於台南新市西拉雅大道的全新奢華運動餐酒館。提供熱血體育賽事轉播、精緻客製化雞尾酒、創意無國界美食，點亮您的台南夜晚，激發您的味蕾靈感。">
+  <meta name="keywords" content="光與靈感餐酒館, Light & Muse, 台南餐酒館, 南科餐酒館, 新市餐酒館, 運動酒吧, 賽事直播, 統一獅, NBA轉播, 創意調酒, 包廂預約">
+  <meta name="author" content="Light & Muse Bistro">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Light & Muse 光與靈感餐酒館 | 台南新市運動主題餐酒館">
+  <meta property="og:description" content="運動熱血，啟發味蕾靈感。結合體育賽事現場大螢幕轉播與頂級調酒美食，西拉雅大道聚會首選！">
+  <meta property="og:image" content="./assets/logo.jpg">
+  
+  <title>Light & Muse 光與靈感餐酒館 | 台南新市運動主題餐酒館</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  
+  <!-- Core Custom Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo-container" aria-label="返回首頁">
+        <img src="./assets/logo.jpg" alt="Light & Muse Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="gold-text">LIGHT & MUSE</span>
+          <span class="logo-subtitle">光與靈感餐酒館</span>
+        </div>
+      </a>
+      
+      <button class="mobile-nav-toggle" aria-label="切換選單">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">首頁</a></li>
+          <li><a href="#opening-event" class="nav-link">開幕活動</a></li>
+          <li><a href="#about" class="nav-link">品牌故事</a></li>
+          <li><a href="#broadcast" class="nav-link">賽事直播</a></li>
+          <li><a href="#menu" class="nav-link">精選菜單</a></li>
+          <li><a href="#reservation" class="nav-link">線上訂位</a></li>
+          <li><a href="#contact" class="nav-link">聯絡資訊</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-container">
+      <img src="./assets/hero_background.png" alt="Light & Muse interior background" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-basketball-ball"></i>
+        <span>台南南科時尚運動餐酒館</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="gold-text">運動熱血</span>，啟發<br>
+        <span class="gold-text">味蕾靈感</span>
+      </h1>
+      <p class="hero-desc">
+        在 Light & Muse，我們將熱血激情的運動賽事現場，與極致講究的繆思創意調酒完美融合。點亮每一個相聚夜幕，激發無限感官想像。
+      </p>
+      <div class="hero-btns">
+        <a href="#reservation" class="btn btn-primary" id="btn-hero-book">立即線上訂位</a>
+        <a href="#menu" class="btn btn-outline" id="btn-hero-menu">瀏覽靈感菜單</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GRAND OPENING EVENT & LUCKY WHEEL (開幕活動)
+       ========================================== -->
+  <section class="opening-event section" id="opening-event">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Grand Opening Special</span>
+        <h2 class="section-title">6/10 盛大開幕慶限定</h2>
+      </div>
+      
+      <div class="opening-grid">
+        <!-- Left: Event details & Flyer -->
+        <div class="opening-flyer-box">
+          <img src="./assets/opening_flyer.png" alt="Light & Muse 開幕宣傳海報" class="opening-flyer-img">
+        </div>
+        
+        <!-- Right: Interactive Lucky Wheel -->
+        <div class="wheel-section glass-panel" style="padding: 40px 20px;">
+          <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 10px;" class="gold-text">幸運轉盤抽抽樂</h3>
+          <p class="wheel-title-desc">
+            活動期間 <strong>6/10 (三) ～ 6/13 (六)</strong>，來店消費即可參加轉盤抽獎！<br>
+            立即在網頁上點擊中央 <strong>SPIN</strong> 試手氣，轉出驚喜好禮帶回家！
+          </p>
+          
+          <div class="wheel-container">
+            <div class="wheel-arrow"></div>
+            <canvas id="wheel-canvas" width="360" height="360"></canvas>
+            <button id="wheel-spin-btn">SPIN</button>
+          </div>
+          
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 25px;">
+            * 每個網頁瀏覽器限抽乙次，憑得獎截圖於店內消費即可兌換。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prize Modal Dialog -->
+  <div class="prize-modal" id="prize-modal">
+    <div class="prize-card glass-panel">
+      <div class="success-icon-wrapper" style="width: 70px; height: 70px; font-size: 2rem;">
+        <i class="fas fa-gift"></i>
+      </div>
+      <h3 class="prize-modal-title gold-text">恭喜獲得好禮！</h3>
+      <p style="color: var(--silver-light); font-size: 1.05rem;">您在 Light & Muse 幸運轉盤中抽中了：</p>
+      
+      <div class="coupon-box" id="prize-name">
+        <!-- Prize name filled by JS -->
+      </div>
+      
+      <div id="coupon-code" style="color: var(--text-muted); font-size: 0.9rem;">
+        <!-- Coupon info filled by JS -->
+      </div>
+      
+      <button class="btn btn-primary" id="close-prize-modal" style="margin-top: 25px; padding: 10px 30px;">確認收下</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       ABOUT US SECTION (品牌故事)
+       ========================================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="section-title-wrapper" style="text-align: left; margin-bottom: 25px;">
+            <span class="section-subtitle">Brand Concept</span>
+            <h2 class="section-title">點亮夜晚，探尋繆思</h2>
+          </div>
+          <p class="about-text">
+            「Light & Muse 光與靈感餐酒館」座落於台南科學園區旁西拉雅大道。我們的誕生，是為了解放白天疲憊的思緒，用一杯調酒、一場球賽，重塑您的夜生活美學。
+          </p>
+          <p class="about-text">
+            我們以「L」代表 Light（光芒），那是巨幅螢幕上轉播運動賽事的激情與汗水，也是與好友歡聚時的溫暖燈火；以「M」代表 Muse（靈感），那是調酒師在吧台後揮灑創意的魔幻畫布，以及廚師運用無國界料理技巧呈現的味覺交響樂。
+          </p>
+          
+          <div class="about-concept-cards">
+            <div class="concept-card glass-panel">
+              <i class="fas fa-basketball-ball concept-icon"></i>
+              <h3 class="concept-title">極致賽事氛圍</h3>
+              <p>巨幅投影螢幕，超清晰畫質播放 NBA、歐冠、棒球經典賽事，熱血零距離。</p>
+            </div>
+            <div class="concept-card glass-panel">
+              <i class="fas fa-cocktail concept-icon"></i>
+              <h3 class="concept-title">靈感調酒藝術</h3>
+              <p>精選在地風味與現代烈酒，每一杯特調都是視覺與味覺的藝術品。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-image-wrapper">
+          <div class="about-img-frame">
+            <img src="./assets/cocktail_signature.png" alt="Light & Muse Signature Cocktail" class="about-img">
+          </div>
+          <div class="about-badge glass-panel">
+            <div class="badge-number gold-text">160</div>
+            <div class="badge-label">西拉雅大道</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       LIVE BROADCAST CALENDAR (賽事直播)
+       ========================================== -->
+  <section class="broadcast" id="broadcast">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Live Broadcast</span>
+        <h2 class="section-title">熱門體育賽事轉播行程</h2>
+      </div>
+      
+      <div class="calendar-filter">
+        <button class="filter-btn active" data-filter="all">所有賽事</button>
+        <button class="filter-btn" data-filter="basketball"><i class="fas fa-basketball-ball"></i> 籃球 NBA</button>
+        <button class="filter-btn" data-filter="football"><i class="fas fa-soccer-ball"></i> 足球 Football</button>
+        <button class="filter-btn" data-filter="others"><i class="fas fa-baseball-ball"></i> 棒球及其他</button>
+      </div>
+      
+      <div class="events-timeline" id="events-container">
+        <!-- Events will be dynamically populated by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       INTERACTIVE MENU SECTION (菜單與酒單)
+       ========================================== -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Inspirational Menu</span>
+        <h2 class="section-title">靈感酒單與創意料理</h2>
+      </div>
+      
+      <div class="menu-filter">
+        <button class="filter-btn active" data-category="opening"><i class="fas fa-bullhorn text-gold"></i> 開幕特選 Specials</button>
+        <button class="filter-btn" data-category="signature">靈感特調 Cocktails</button>
+        <button class="filter-btn" data-category="classics">經典變奏 Classics</button>
+        <button class="filter-btn" data-category="mains">主廚極致料理 Mains</button>
+        <button class="filter-btn" data-category="tapas">配酒精緻小食 Tapas</button>
+      </div>
+      
+      <div class="menu-grid" id="menu-container">
+        <!-- Menu items will be dynamically populated by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       RESERVATION SECTION (線上預約)
+       ========================================== -->
+  <section class="reservation" id="reservation">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Table Reservation</span>
+        <h2 class="section-title">線上預約專屬座位</h2>
+      </div>
+      
+      <div class="booking-wrapper glass-panel">
+        
+        <!-- Progress Tracker -->
+        <div class="booking-progress">
+          <div class="progress-bar-active"></div>
+          <div class="progress-step active" id="prog-step-1">1<span class="progress-label">選擇時段</span></div>
+          <div class="progress-step" id="prog-step-2">2<span class="progress-label">座位區域</span></div>
+          <div class="progress-step" id="prog-step-3">3<span class="progress-label">填寫聯絡</span></div>
+          <div class="progress-step" id="prog-step-4">✓<span class="progress-label">完成預約</span></div>
+        </div>
+        
+        <form id="reservation-form" novalidate>
+          
+          <!-- STEP 1: Guests, Date, Time -->
+          <div class="booking-step active" id="booking-step-1">
+            <h3 class="step-title">步驟 1: 選擇人數與時間</h3>
+            
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="booking-guests">用餐人數</label>
+                <select id="booking-guests" class="form-control" required>
+                  <option value="" disabled selected>請選擇人數</option>
+                  <option value="1">1 人</option>
+                  <option value="2">2 人</option>
+                  <option value="3">3 人</option>
+                  <option value="4">4 人</option>
+                  <option value="5">5 - 6 人</option>
+                  <option value="7">7 - 10 人 (需來電確認)</option>
+                  <option value="12">團體包場 (10人以上)</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="booking-date">用餐日期</label>
+                <input type="date" id="booking-date" class="form-control" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="booking-time">預約時段</label>
+                <select id="booking-time" class="form-control" required>
+                  <option value="" disabled selected>請選擇時段</option>
+                  <option value="18:00">18:00 (晚餐首選)</option>
+                  <option value="19:00">19:00</option>
+                  <option value="20:00">20:00</option>
+                  <option value="21:00">21:00 (觀賽推薦)</option>
+                  <option value="22:00">22:00</option>
+                  <option value="23:00">23:00</option>
+                  <option value="00:00">00:00 (深夜小酌)</option>
+                  <option value="01:00">01:00</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="booking-nav-btns" style="justify-content: flex-end;">
+              <button type="button" class="btn btn-primary" data-action="next">下一步 <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+          
+          <!-- STEP 2: Seating Area -->
+          <div class="booking-step" id="booking-step-2">
+            <h3 class="step-title">步驟 2: 選擇您心儀的座位區</h3>
+            
+            <div class="seating-grid">
+              <div class="seating-card" data-area="bar">
+                <i class="fas fa-beer seating-icon"></i>
+                <h4 class="seating-name">酒吧吧台 Bar Counter</h4>
+                <p class="seating-desc">第一視角觀看調酒大師調酒，可與調酒師互動，適合 1-2 人小酌。</p>
+                <span class="seating-capacity">適合 1 - 2 人</span>
+              </div>
+              
+              <div class="seating-card" data-area="general">
+                <i class="fas fa-chair seating-icon"></i>
+                <h4 class="seating-name">經典用餐區 General</h4>
+                <p class="seating-desc">舒適的高腳椅與餐桌配置，正對大型轉播投影幕，熱血球賽完美視野。</p>
+                <span class="seating-capacity">適合 2 - 6 人</span>
+              </div>
+              
+              <div class="seating-card" data-area="sofa">
+                <i class="fas fa-couch seating-icon"></i>
+                <h4 class="seating-name">豪華沙發包廂 Sofa</h4>
+                <p class="seating-desc">獨立舒適的沙發隔間，享受私密社交空間與頂級環繞音效，視野絕佳。</p>
+                <span class="seating-capacity">適合 5 人以上</span>
+              </div>
+            </div>
+            
+            <div class="booking-nav-btns">
+              <button type="button" class="btn btn-outline" data-action="prev"><i class="fas fa-arrow-left"></i> 上一步</button>
+              <button type="button" class="btn btn-primary" data-action="next">下一步 <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+          
+          <!-- STEP 3: Contact Info -->
+          <div class="booking-step" id="booking-step-3">
+            <h3 class="step-title">步驟 3: 填寫訂位人資料</h3>
+            
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="booking-name">姓名</label>
+                <input type="text" id="booking-name" class="form-control" placeholder="請輸入姓名" required>
+              </div>
+              <div class="form-group">
+                <label for="booking-phone">聯絡電話</label>
+                <input type="tel" id="booking-phone" class="form-control" placeholder="請輸入手機號碼" required>
+              </div>
+            </div>
+            
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="booking-email">電子信箱 (選填)</label>
+                <input type="email" id="booking-email" class="form-control" placeholder="例: customer@email.com">
+              </div>
+              <div class="form-group">
+                <label for="booking-note">特別備註 (選填)</label>
+                <input type="text" id="booking-note" class="form-control" placeholder="例: 慶生、希望觀看NBA直播、食物過敏等">
+              </div>
+            </div>
+            
+            <div class="booking-nav-btns">
+              <button type="button" class="btn btn-outline" data-action="prev"><i class="fas fa-arrow-left"></i> 上一步</button>
+              <button type="button" class="btn btn-primary" id="btn-confirm-booking">確認預約 <i class="fas fa-check"></i></button>
+            </div>
+          </div>
+          
+          <!-- STEP 4: Success Confirmation -->
+          <div class="booking-step" id="booking-step-4">
+            <div class="booking-success-card">
+              <div class="success-icon-wrapper">
+                <i class="fas fa-check"></i>
+              </div>
+              <h3 class="success-title gold-text">預約成功！</h3>
+              <p class="success-text">
+                我們已收到您的訂位申請，專屬預約確認已為您保留。期待在 Light & Muse 與您相遇！
+              </p>
+              
+              <div class="booking-summary-box">
+                <div class="summary-row">
+                  <span class="summary-label">預約編號</span>
+                  <span class="summary-val gold-text" id="summary-ref">LM-XXXXXX-XXX</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">訂位姓名</span>
+                  <span class="summary-val" id="summary-name">-</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">聯絡電話</span>
+                  <span class="summary-val" id="summary-phone">-</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">預約人數</span>
+                  <span class="summary-val" id="summary-guests">-</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">用餐時間</span>
+                  <span class="summary-val" id="summary-datetime">-</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">座位區域</span>
+                  <span class="summary-val" id="summary-area">-</span>
+                </div>
+              </div>
+              
+              <a href="#home" class="btn btn-primary" onclick="window.location.reload();">返回首頁</a>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT & LOCATION SECTION
+       ========================================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Find Us</span>
+        <h2 class="section-title">營業資訊與交通指南</h2>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info-panel">
+          <div class="contact-card-box glass-panel">
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text-box">
+                <h4>店面地址</h4>
+                <p>台南市新市區西拉雅大道 160 號 (惹鍋旁)</p>
+                <button class="copy-btn" onclick="copyAddress();" aria-label="複製店面地址">
+                  <i class="far fa-copy"></i> 複製地址
+                </button>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-text-box">
+                <h4>營業時間</h4>
+                <p>星期一 至 星期日 18:00 – 02:00</p>
+                <p style="font-size: 0.8rem; color: var(--gold-light); margin-top: 5px;">
+                  * 配合重大體育賽事延長營業時間，歡迎致電洽詢。
+                </p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text-box">
+                <h4>預約/客服電話</h4>
+                <p>0910-760012</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="map-wrapper">
+          <div id="map" class="dark-leaflet-map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-container">
+            <img src="./assets/logo.jpg" alt="Light & Muse Logo" class="logo-img" style="height: 40px;">
+            <div class="logo-text" style="font-size: 1.1rem;">
+              <span class="gold-text">LIGHT & MUSE</span>
+              <span class="logo-subtitle" style="font-size: 0.6rem;">光與靈感餐酒館</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            南科高質感奢華運動主題餐酒館。讓夜幕之光引導相聚，讓精緻調酒點亮無窮的靈感。
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1Dnuq2etWC/?mibextid=wwXIfr" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Line"><i class="fab fa-line"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-links-title">探索餐酒館</h3>
+          <ul class="footer-links-list">
+            <li><a href="#home">回到首頁</a></li>
+            <li><a href="#about">品牌故事</a></li>
+            <li><a href="#broadcast">體育賽事轉播</a></li>
+            <li><a href="#menu">靈感酒單/美食</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="footer-links-title">顧客支援</h3>
+          <ul class="footer-links-list">
+            <li><a href="#reservation">線上預約訂位</a></li>
+            <li><a href="#contact">營業交通資訊</a></li>
+            <li><a href="#">包場與商務合作</a></li>
+            <li><a href="#">服務條款與隱私政策</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Light & Muse Bistro. All rights reserved. 統一編號: 00447527.</p>
+        <p>Designed with <i class="fas fa-heart text-gold" style="color: var(--gold-primary);"></i> for Tainan's Nightlife.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Custom Core Script -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
